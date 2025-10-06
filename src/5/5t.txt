@@ -1,0 +1,4 @@
+Создал шаблон html, создал переменную нулевого типа, присвоил два раза одну и туже функцию, одну с SafeNull другая без. Первая с SafeNull Ничего не вывела, а вторая выдала ошибку:
+Fatal error: Uncaught Error: Call to a member function getName() on null in I:\331 Приматы\Люди\Пахомов Владимир
+ Романович\Webs\5\main5.php:15 Stack trace: #0 {main} thrown in 
+I:\331 Приматы\Люди\Пахомов Владимир Романович\Webs\5\main5.php on line 15
