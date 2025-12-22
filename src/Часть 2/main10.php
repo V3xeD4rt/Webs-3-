@@ -15,13 +15,9 @@ class CryptoPayment implements Payable
 {
     public function pay(float $amount): bool
     {
-        echo "Оплата криптовалютой: " . $amount . "\n";
+        echo "Оплата криптой: " . $amount . "\n";
         return true;
     }
-}
-function processPayment(Payable $payment, float $amount): void
-{
-    $payment->pay($amount);
 }
 ?>
 
@@ -36,12 +32,12 @@ function processPayment(Payable $payment, float $amount): void
 
 <body>
     <?php
-    $p = new CashPayment(65.5);
-    $pd = new CryptoPayment(65.5);
+    $p = new CashPayment();
+    $pd = new CryptoPayment();
     ?>
     <header>
-        <?php echo $p->getInfo(); ?><br>
-        <?php echo $pd->getInfo(); ?><br>
+        <?php echo $p->pay(16782.9); ?><br>
+        <?php echo $pd->pay(1634.9); ?><br>
     </header>
     <main></main>
 </body>

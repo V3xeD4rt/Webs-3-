@@ -1,33 +1,31 @@
+<?php
+class StringUtils
+{
+    public static function isPalindrome(string $s): bool
+    {
+        $s = mb_strtolower(preg_replace('/\s+/', '', $s));
+        return $s === strrev($s);
+    }
+}
+?>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo "Привет PHP" ?></title>
+    <title>Document</title>
 </head>
 
 <body>
-    <header>
-    </header>
-    <main>
-        <?php
-        class StringUtils
-        {
-            public static function isPalindrome(string $s): bool
-            {
-                $s = mb_strtolower(preg_replace('/\s+/', '', $s));
-                return $s === strrev($s);
-            }
-        }
-        $string1 = "Level";
-        $string2 = "Мадам";
-        $string3 = "Тест";
-        echo "{$string1} - это палиндром? " . (StringUtils::isPalindrome($string1) ? "да" : "нет") . "<br>";
-        echo "{$string2} - это палиндром? " . (StringUtils::isPalindrome($string2) ? "да" : "нет") . "<br>";
-        echo "{$string3} - это палиндром? " . (StringUtils::isPalindrome($string3) ? "да" : "нет") . "<br>";
-        ?>
-    </main>
+    <?php
+    $a = "Level";
+    $b = "Мадам";
+    $c = "Тест";
+    echo "{$a} - это палиндром? " . (StringUtils::isPalindrome($a) ? "да" : "нет") . "<br>";
+    echo "{$b} - это палиндром? " . (StringUtils::isPalindrome($b) ? "да" : "нет") . "<br>";
+    echo "{$c} - это палиндром? " . (StringUtils::isPalindrome($c) ? "да" : "нет") . "<br>";
+    ?>
 </body>
 
 </html>

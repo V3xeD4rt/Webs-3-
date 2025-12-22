@@ -10,7 +10,7 @@
 <body>
     <header>
         <?php $user = null;$user?->getName(); ?>
-        <?php echo "Вывод с ?", $user?><br>
+        <?php echo "Вывод со знаком ?", $user?>Ни че нету<br>
         <?php echo "Смотри ща прикол будет"?>
         <?php $user = null;$user->getName(); ?>
         <?php echo "Вывод без ?", $user ?>
